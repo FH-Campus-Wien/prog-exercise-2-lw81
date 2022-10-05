@@ -6,32 +6,61 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        double number;
+        Scanner scanner = new Scanner(System.in);
+        number = scanner.nextDouble();
+        //System.out.printf("%,2f", variable, System.lineSeparator());
+        //summe laufen überschreiben, do while schleife
+        while(number != 0){
+            number = scanner.nextDouble();
+            int count = 1;
+            System.out.println("Number " + count +" :");
+            if (number <= 0 ){
+                System.out.println("No number entered.");
+            }
+
+        }
     }
 
     //todo Task 2
     public void stairs(){
-        // input your solution here
+        final int ROWS = 6;
+        final int COLS = 4;
+
+
+        for(int i = 0; i < ROWS; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        // dritte schleife mit leerzeichen
+        // i*2 - 1
     }
 
     //todo Task 4
     public void printRhombus(){
-        // input your solution here
+        // w3resource
+        //single character einlesen
+        //single char
+        //char c = scan.next().charAt(0); character an der 0ten Stelle
     }
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        // ähnlich wie nummern eingabe, nur integer. noten nicht zwischenspeicher, sondern in summen variable laufen aufsummieren, int durch int dividieren kommt immer nur in raus, typecasten
+        //sum (double) count wird wieder zu dpuble
     }
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+        // wie zerlege ich eine zahl, in einer schleife
+        //zwei schleifen
+        //immer wenn man zahl 4 habt, mit einem break die schleife abbrechen, %10 /10
     }
 
     public static void main(String[] args){
