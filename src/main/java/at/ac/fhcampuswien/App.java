@@ -5,41 +5,67 @@ import java.util.Scanner;
 public class App {
 
     //todo Task 1
-    public void largestNumber(){
+    public void largestNumber() {
         double number;
+        double largest = 0;
+        int count = 0;
         Scanner scanner = new Scanner(System.in);
-        number = scanner.nextDouble();
-        //System.out.printf("%,2f", variable, System.lineSeparator());
+        //number = scanner.nextDouble();
+        //System.out.printf("%.2f", largest, System.lineSeparator());
         //summe laufen überschreiben, do while schleife
-        while(number != 0){
-            number = scanner.nextDouble();
-            int count = 1;
-            System.out.println("Number " + count +" :");
-            if (number <= 0 ){
-                System.out.println("No number entered.");
-            }
+        //largest = scanner.nextDouble();
+        //for (int count =1; number != 0; count++) {
+        //}
+        do {
+            count++;
+            number = scanner.nextInt();
 
-        }
+            if (number > largest) {
+                largest = number;
+            }
+            System.out.println("Number " + count + ": " + number + " ");
+
+            if (number <= 0 && count > 0){
+                System.out.print("The largest number is ");
+                System.out.printf("%.2f", largest, System.lineSeparator());
+                break;
+            }
+//            else {
+//                System.out.print("No number entered.");
+//            }
+        } while (number >= 0);
     }
 
     //todo Task 2
     public void stairs(){
-        final int ROWS = 6;
-        final int COLS = 4;
-
-
+        Scanner scanner = new Scanner(System.in);
+        final int ROWS = scanner.nextInt();
+        System.out.print("n: ");
+        if (ROWS <=0){
+            System.out.println("Invalid number!");
+        }
+        int counter = 0;
         for(int i = 0; i < ROWS; i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print("*");
+                counter++;
+                System.out.print(counter + " ");
             }
             System.out.println();
         }
     }
 
     //todo Task 3
-    public void printPyramid(){
-        // dritte schleife mit leerzeichen
-        // i*2 - 1
+    public void printPyramid() {
+        final int ROWS = 6;
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = ROWS - 1; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= i * 2; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 4
