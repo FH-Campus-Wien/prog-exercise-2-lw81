@@ -74,68 +74,37 @@ public class App {
         //single char
         //char c = scan.next().charAt(0); character an der 0ten Stelle
         Scanner scanner = new Scanner(System.in);
-        //System.out.print("Input the number:  ");
-//        int rows = scanner.nextInt();
-//        int count = 1;
-//        int col = 1;
-//        //int start = 0;
-//
-//        for (int i = 1; i < rows*2; i++) {
-//            //rows = rows/2;
-//            for (int spc = rows - col; spc > 0; spc--) {
-//                System.out.print(" ");
-//            }
-//            if (i < rows) {
-//                //start = i;          //for number
-//                col++;    //for spaces
-//            } else {
-//                //start = rows * 2 - i;   //for number
-//                col--;      //for space
-//            }
-//            for (int j = 0; j < count; j++) {
-//                System.out.print("*");
-////                if (j < count / 2) {
-////                    start--;
-////                } else {
-////                    start++;
-////                }
-//            }
-//            if (i < rows) {
-//                count = count + 2;
-//            } else {
-//                count = count - 2;
-//            }
-//
-//            System.out.println();
-//        }
         int height = scanner.nextInt();
         char c = scanner.next().charAt(0);
-        int col = height / 2 + 1;
-        int length = height * 2 - 1;
+        //int col = height / 2 + 1;
+        //int length = height * 2 - 1;
         System.out.print("h: ");
         System.out.print("c: ");
         if ((height % 2) == 0) {
             System.out.print("Invalid number!");
             System.out.println();
-            //return;
-        } else  {
-            for (int i = 0; i < col; i++) {
-                for (int j = 0; j < length; j++) {
-                    if ((j > (length / 2) - i) && (j < (length / 2) + i)) {
-                        System.out.print(c);
-                    } else {
-                        System.out.print(" ");
-                    }
+        } else {
+            for (int i = 0; i < height / 2; i++) {
+                for (int j = height - 3; j > i; j--) {
+                    System.out.print(" ");
+                }
+                for (int k = 0; k <= i * 2; k++) {
+                    char c1 = c;
+                    c1 += 1;
+                    if (c1 != c){
+                        c1 += 1;
+                        System.out.print(c1);
+                    }else {System.out.print(c);}
+                    //System.out.print(c);
                 }
                 System.out.println();
             }
-            for (int i = height - col + 1; i > 0; i--) {
-                for (int j = length; j > 0; j--) {
-                    if ((j > (height - 1 / 2) - i) && (j < (height - 1 / 2) + i)) {
-                        System.out.print("c");
-                    } else {
-                        System.out.print(" ");
-                    }
+            for (int i = 0; i < height-2; i++) {
+                for (int j = 0; j < i; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = height; k > i * 2; k--) {
+                    System.out.print(c);
                 }
                 System.out.println();
             }
