@@ -68,7 +68,7 @@ public class App {
     }
 
     //todo Task 4
-    public void printRhombus(){
+    public void printRhombus() {
         // w3resource
         //single character einlesen
         //single char
@@ -109,30 +109,37 @@ public class App {
 //            System.out.println();
 //        }
         int height = scanner.nextInt();
-        int col = height /2 +1;
+        char c = scanner.next().charAt(0);
+        int col = height / 2 + 1;
         int length = height * 2 - 1;
-
-        for (int i = 0; i < col; i++) {
-            for (int j = 0 ; j < length; j++) {
-                if ( (j > (length/2) - i) && (j < (length/2) + i) ) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
-            }
+        System.out.print("h: ");
+        System.out.print("c: ");
+        if ((height % 2) == 0) {
+            System.out.print("Invalid number!");
             System.out.println();
-        }
-        for (int i = height - col+1; i > 0 ; i--) {
-            for (int j = length; j > 0 ; j--) {
-                if ( (j > (height-1 / 2) - i) && (j < (height-1 / 2) + i) ) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
+            //return;
+        } else  {
+            for (int i = 0; i < col; i++) {
+                for (int j = 0; j < length; j++) {
+                    if ((j > (length / 2) - i) && (j < (length / 2) + i)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
                 }
+                System.out.println();
             }
-            System.out.println();
+            for (int i = height - col + 1; i > 0; i--) {
+                for (int j = length; j > 0; j--) {
+                    if ((j > (height - 1 / 2) - i) && (j < (height - 1 / 2) + i)) {
+                        System.out.print("c");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
         }
-
     }
 
     //todo Task 5
