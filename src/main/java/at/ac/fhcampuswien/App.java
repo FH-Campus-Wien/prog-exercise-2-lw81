@@ -76,22 +76,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int height = scanner.nextInt();
         char c = scanner.next().charAt(0);
-        //int col = height / 2 + 1;
-        //int length = height * 2 - 1;
-        //if (h%2 == 1) gerade zahl
-        //  obere for schleife
-//        for (int diff =0-row; diff <= row;diff++){
-//            System.out.println((char)(c-Math.abs(diff)));
-//            c ist ne character
-//                    Math.abs()LIEFERT integer zurück
-//                    if (a<0) {-a} else {a}
-//                    printet er char oder int aus?
-//        }
-        //untere vorschleife
-//        for (int k = 0; k<=i, k++){
-//        System.out.print((char)(c - Math.abs(k)));   andere art zu schreiben als if else
-//        }
-
         System.out.print("h: ");
         System.out.print("c: ");
         if ((height % 2) == 0) {
