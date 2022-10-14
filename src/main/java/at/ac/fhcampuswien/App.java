@@ -78,6 +78,20 @@ public class App {
         char c = scanner.next().charAt(0);
         //int col = height / 2 + 1;
         //int length = height * 2 - 1;
+        //if (h%2 == 1) gerade zahl
+        //  obere for schleife
+//        for (int diff =0-row; diff <= row;diff++){
+//            System.out.println((char)(c-Math.abs(diff)));
+//            c ist ne character
+//                    Math.abs()LIEFERT integer zurück
+//                    if (a<0) {-a} else {a}
+//                    printet er char oder int aus?
+//        }
+        //untere vorschleife
+//        for (int k = 0; k<=i, k++){
+//        System.out.print((char)(c - Math.abs(k)));   andere art zu schreiben als if else
+//        }
+
         System.out.print("h: ");
         System.out.print("c: ");
         if ((height % 2) == 0) {
@@ -89,13 +103,13 @@ public class App {
                     System.out.print(" ");
                 }
                 for (int k = 0; k <= i * 2; k++) {
-                    char c1 = c;
-                    c1 += 1;
-                    if (c1 != c){
-                        c1 += 1;
-                        System.out.print(c1);
-                    }else {System.out.print(c);}
-                    //System.out.print(c);
+//                    char c1 = c;
+//                    c1 += 1;
+//                    if (c1 != c){
+//                        c1 += 1;
+//                        System.out.print(c1);
+//                    }else {System.out.print(c);}
+                    System.out.print(c);
                 }
                 System.out.println();
             }
@@ -106,6 +120,7 @@ public class App {
                 for (int k = height; k > i * 2; k--) {
                     System.out.print(c);
                 }
+                //noch eine schleife für die buchstaben
                 System.out.println();
             }
         }
@@ -119,7 +134,7 @@ public class App {
         double sum = 0;
         int count = 0;
         int markCounter = 0;
-        double average;
+        //double average;
         Scanner scanner = new Scanner(System.in);
         //number = scanner.nextDouble();
         //System.out.printf("%.2f", largest, System.lineSeparator());
