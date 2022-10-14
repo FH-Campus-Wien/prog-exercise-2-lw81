@@ -102,25 +102,35 @@ public class App {
                 for (int j = height - 3; j > i; j--) {
                     System.out.print(" ");
                 }
-                for (int k = 0; k <= i * 2; k++) {
-//                    char c1 = c;
-//                    c1 += 1;
-//                    if (c1 != c){
-//                        c1 += 1;
-//                        System.out.print(c1);
-//                    }else {System.out.print(c);}
-                    System.out.print(c);
+                for (int k = i; k > 0; k--) {
+                    char c1 = c;
+                    c1 -= k;
+                    System.out.print(c1);
+
+                }
+                System.out.print(c);
+                for (int k = 1; k <= i; k++) {
+                    char c2 = c;
+                    c2 -= k;
+                    System.out.print(c2);
                 }
                 System.out.println();
             }
-            for (int i = 0; i < height-2; i++) {
-                for (int j = 0; j < i; j++) {
+            for (int i = (height / 2); i >= 0; i--) {
+                for (int j = height - 3; j > i; j--) {
                     System.out.print(" ");
                 }
-                for (int k = height; k > i * 2; k--) {
-                    System.out.print(c);
+                for (int k = i; k > 0; k--) {
+                    char c2 = c;
+                    c2 -= k;
+                    System.out.print(c2);
                 }
-                //noch eine schleife für die buchstaben
+                System.out.print(c);
+                for (int k = 1; k <= i; k++) {
+                    char c1 = c;
+                    c1 -= k;
+                    System.out.print(c1);
+                }
                 System.out.println();
             }
         }
@@ -191,6 +201,8 @@ public class App {
                 int part1 = n % 10;
                 part2 = part2 + (part1 * part1);
                 n = n / 10;
+                //part2 += Math.pow(n%10,2);
+                //n /= 10;
             }
             n = part2;
         }
